@@ -1,12 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+import { Component } from 'react';
+import { Buscador } from './components/Buscador'
 
-function App() {
-  return (
-    <div className="container">
-      <h1>Hola mundo</h1>
-    </div>
-  );
+class App extends Component {
+  render() {
+    return (
+      <div className="app container">
+        <div className="jumpbotron">
+          <p className="lead text-center">Buscador de Imagenes</p>
+           <Buscador/>
+        </div>
+      </div>
+    );
+  }
 }
 
 export default App;

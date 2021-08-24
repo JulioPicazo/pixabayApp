@@ -3,8 +3,14 @@ import { Buscador } from './components/Buscador'
 
 class App extends Component {
 
-  datosBusqueda = (termnino) =>{
-    console.log(termnino);
+
+  state = {
+    termnino : 'Busqueda'
+  }
+
+  datosBusqueda = (termnino) => {
+    this.setState({termnino})
+    //console.log(termnino);
   }
 
   render() {
@@ -16,6 +22,7 @@ class App extends Component {
             <Buscador datosBusqueda={this.datosBusqueda} />
            
         </div>
+        <h1>Datos a buscar: {this.state.termnino}</h1>
       </div>
     );
   }

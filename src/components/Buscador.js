@@ -5,6 +5,7 @@ export class Buscador extends Component {
     busquedaRef = React.createRef();
 
     obtenerDatos = (e) => {
+        //Codigo javaScript
         e.preventDefault();
 
         //Tomamos el valor del input
@@ -12,13 +13,18 @@ export class Buscador extends Component {
         console.log('Desde componente hijo: ' + termino );
 
         //Lo que enviamos al componente principal
+        //Enviar datos de componente hijo a padre
         this.props.datosBusqueda(termino);
     }
 
     render() {
         return (
             
-            
+            //Le agregamos un evento al form
+            //TIPOS DE EVETOS
+            //onSUbmit, onClick
+
+            //Este tipo de dormulrio es jsx
             <form onSubmit={this.obtenerDatos}>
                 <div className="row">
                     <div className="form-group col-md-10">
